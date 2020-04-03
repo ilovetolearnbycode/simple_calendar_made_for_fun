@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calendar">
+            <div class="calendar-header">
+                <div class="content-header">
+                    <span id="left_arrow" class="arrow">
+                        <i class="material-icons">
+                            keyboard_arrow_left
+                        </i>
+                    </span>
+                    <div class="currentDate">
+                        <span id="date"></span>
+                        <span id="month"></span>
+                        <span id="year"></span>
+                    </div>
+                    <span id="right_arrow" class="arrow">
+                        <i class="material-icons">
+                            keyboard_arrow_right
+                        </i>
+                    </span>
+                </div>
+                <div class="days-header">
+                    <span class="day">Mon</span>
+                    <span class="day">Tue</span>
+                    <span class="day">Wed</span>
+                    <span class="day">Thu</span>
+                    <span class="day">Fri</span>
+                    <span class="day">Sat</span>
+                    <span class="day">Sun</span>
+
+                </div>
+            </div>
+            <div class="calendar-body" id="calendarBody">
+                <!-- dates goes here -->
+                <div class="week">
+                    <span class="date">xx</span>
+                    <span class="date">xx</span>
+                    <span class="date">xx</span>
+                    <span class="date">xx</span>
+                    <span class="date">xx</span>
+                    <span class="date">xx</span>
+                    <span class="date">xx</span>
+                </div>
+
+                <div class="week">
+                    <span class="date">xx</span>
+                    <span class="date">xx</span>
+                    <span class="date">xx</span>
+                    <span class="date">xx</span>
+                    <span class="date">xx</span>
+                    <span class="date">xx</span>
+                    <span class="date">xx</span>
+                </div>
+
+                <div class="week">
+                    <span class="date">xx</span>
+                    <span class="date">xx</span>
+                    <span class="date">xx</span>
+                    <span class="date">xx</span>
+                    <span class="date">xx</span>
+                    <span class="date">xx</span>
+                    <span class="date">xx</span>
+                </div>
+
+                <div class="week">
+                    <span class="date">xx</span>
+                    <span class="date">xx</span>
+                    <span class="date">xx</span>
+                    <span class="date">xx</span>
+                    <span class="date">xx</span>
+                    <span class="date">xx</span>
+                    <span class="date">xx</span>
+                </div>
+
+                <div class="week">
+                    <span class="date">xx</span>
+                    <span class="date">xx</span>
+                    <span class="date">xx</span>
+                    <span class="date">xx</span>
+                    <span class="date">xx</span>
+                    <span class="date">xx</span>
+                    <span class="date">xx</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="fullPageForm" id="fullPageForm">
+      <span id='close'>Close</span>
+      <form class="eventForm"  id="eventForm">
+        <input type="text" name="event" id="event" placeholder="Enter your important event....">
+        <input type="submit" name="more" id="more" value="Add More">
+        <input type="submit" name="Submit"  id="submit"value="Submit">
+      </form>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+*,*::after,*::before{
+    margin:0;
+    padding:0;
+    outline: none;
+    box-sizing: border-box;
+}
+html,body{
+    width:100%;
+    height:100%;
+    margin:0;
+    padding:0;
+    user-select:none;
+    /* background:lightgreen; */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.container{
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.calendar{
+    width:75%;
+    min-height:70vh;
+    border-radius: 5px;
+    overflow: hidden;
+    background:lightgreen;
+    box-shadow: 0px 5px 10px 2px #ccc;
+}
+
+.calendar-header{
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background:#fff;
+    padding:0.5rem;
+}
+.content-header{
+    width:100%;
+    display: flex;
+    align-self: center;
+    padding:0.5rem;
+    justify-content: space-around;
+}
+
+.arrow{
+    font-weight: bold;
+    padding:1rem;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius:50%;
+}
+.arrow:hover{
+    box-shadow: 0 0 10px 2px #ccc;
+    transition: 0.2s ease-in;
+}
+.currentDate{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:2rem;
+}
+.currentDate>*{
+    padding:1rem;
+}
+.days-header{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 0 10px 2px #ccc;
+    padding:1rem;
+    border-radius: 5px;
+}
+.week{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around
+}
+.date{
+    text-align: center;
+    padding:2rem;
+    border:2px solid transparent;
+    border-radius: 5px;
+}
+.date:hover{
+  cursor: pointer;
+  color:#fff;
+}
+#calendarBody{
+    padding:1rem;
+}
+
+/* fullpage styles */
+.fullPageForm{
+  width:100%;
+  min-height:100vh;
+  position: absolute;
+  top:0;
+  background:rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  display:none;
+}
+#close{
+  width:75%;
+  padding:1rem;
+  color:#fff;
+  font-size:1.1rem;
+  font-weight:bold;
+  text-align: right;
+  cursor: pointer;
+}
+#close:hover{
+  color:#000;
+}
+.eventForm{
+  width:75%;
+  padding:1rem;
+  min-height:71vh;
+  border-radius: 5px;
+  border:2px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background:#6546f0;
+}
+::placeholder{
+  color:#fff;
+  font-size: 1rem;
+}
+input{
+  width:90%;
+  padding:1rem;
+  background-color: transparent;
+  border:none;
+  border-bottom:2px solid #fff;
+  margin:1rem;
+  color:#fff;
+  font-size:1.2rem;
+  cursor: pointer;
+}
+input[type="submit"]{
+  width:50%;
+  border:2px solid #fff;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.textarea{
+  min-width:90%;
+  max-width:90%;
+  min-height:20vh;
+  padding:0.5rem;
+  border:2px solid #fff;
+  background:transparent;
+  color:#fff;
+  scroll-behavior: smooth;
+  scrollbar-arrow-color: red;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+/* media queries */
+@media screen and (max-width:728px){
+  *{
+    font-size:1rem;
+  }
+  span.date{
+    padding:2rem 0.5rem;
+  }.calendar{
+    width:95%;
+  }
+  .fullPageForm .textarea{
+    font-size:0.8rem;
+  }
+  .fullPageForm input[type="text"]{
+    font-size:0.8rem;
+    font-weight: bold;
+  }
+  .fullPageForm input[type="text"]::placeholder{
+    font-size: 0.8rem;
+    font-weight: normal;
+  }
+  .fullPageForm input[type="submit"]{
+    width:90%;
+    padding:1rem;
+    border-radius:2rem;
+  }
+}
